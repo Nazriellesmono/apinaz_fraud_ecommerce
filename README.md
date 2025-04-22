@@ -1,24 +1,24 @@
 # 🛒 E-commerce Fraud Detection API
 
-API ini dirancang untuk mendeteksi potensi aktivitas penipuan dalam transaksi e-commerce menggunakan machine learning. Model dilatih menggunakan dataset e-commerce dan fokus pada 10 fitur paling berpengaruh yang dipilih melalui analisis feature importance dengan XGBoost.
+This API is designed to detect potential fraudulent activities in e-commerce transactions using machine learning. The model is trained on an e-commerce dataset and focuses on the top 10 most influential features selected through feature importance analysis using XGBoost.
 
 ---
 
-## 🚀 Fitur
-- Prediksi apakah transaksi termasuk fraud
-- Memberikan probabilitas penipuan
-- Level risiko: Low / Medium / High
-- Otentikasi menggunakan API Key
-- Batas maksimum request per menit (rate limit)
+## 🚀 Features
+- Predict whether a transaction is fraudulent  
+- Returns fraud probability  
+- Risk level: Low / Medium / High  
+- API Key authentication  
+- Maximum request limit per minute (rate limit)
 
 ---
 
 ## 📦 Endpoint
 
 ### `POST /v1/predict`
-- **Deskripsi**: Memprediksi kemungkinan penipuan berdasarkan data transaksi.
-- **Headers**:
-  - `x-api-key`: API key milik pengguna
+- **Description**: Predicts the likelihood of fraud based on transaction data.  
+- **Headers**:  
+  - `x-api-key`: User's API key  
 - **Body (JSON)**:
 ```json
 {
@@ -37,7 +37,7 @@ API ini dirancang untuk mendeteksi potensi aktivitas penipuan dalam transaksi e-
 }
 ```
 
-- **Respons**:
+- **Response**:
 ```json
 {
   "is_fraud": true,
@@ -47,65 +47,65 @@ API ini dirancang untuk mendeteksi potensi aktivitas penipuan dalam transaksi e-
 ```
 
 ### `GET /v1/health`
-- Mengecek status kesehatan API
+- Checks the health status of the API
 
 ---
 
-## 🐳 Dukungan Docker
+## 🐳 Docker Support
 ### Build
 ```bash
 docker build -t apinaz-fraud-ecommerce .
 ```
 
-### Jalankan
+### Run
 ```bash
 docker run -d -p 8888:8888 apinaz-fraud-ecommerce
 ```
 
 ---
 
-## 🔐 API Key dan Rate Limiting
-Untuk mengakses endpoint prediksi, tambahkan header berikut:
+## 🔐 API Key & Rate Limiting
+To access the prediction endpoint, include the following header:
 ```bash
 x-api-key: your_api_key_here
 ```
 
-> ⚠️ Pembatasan jumlah request telah diterapkan di `main.py`. Secara default, pengguna hanya dapat mengirim **30 request per menit** untuk predict/v1. Anda dapat mengubah nilai ini sesuai kebutuhan.
+> ⚠️ Request rate limiting has been implemented in `main.py`. By default, users can only send **30 requests per minute** to the `predict/v1` endpoint. You may adjust this value as needed.
 
 ---
 
 ## 🧪 Swagger UI
 
-Dokumentasi interaktif tersedia di Swagger UI setelah container berjalan:
+Interactive documentation is available via Swagger UI once the container is running:
 
 👉 [http://localhost:8889/docs](http://localhost:8889/docs)
 
-Isi dokumentasi meliputi:
-- Skema input (JSON)
-- Contoh payload transaksi
-- Output prediksi fraud dengan probabilitas
-- Rate limit status per user
+The documentation includes:
+- Input schema (JSON)
+- Sample transaction payloads
+- Fraud prediction output with probability
+- Per-user rate limit status
 
 ---
 
-## ⚙️ Stack Teknologi
-- FastAPI
-- XGBoost
-- Joblib
-- Docker
-- Pydantic
-- SlowAPI (untuk rate limit)
+## ⚙️ Tech Stack
+- FastAPI  
+- XGBoost  
+- Joblib  
+- Docker  
+- Pydantic  
+- SlowAPI (for rate limiting)
 
 ---
 
 ## 👨‍💻 Author
-- **Nazriellesmono**
-- GitHub: [@Nazriellesmono](https://github.com/Nazriellesmono)
-- linkedin: [@Nazriellesmono](https://www.linkedin.com/in/nazriel-lesmono-8b8b8a359/)
+- **Nazriellesmono**  
+- GitHub: [@Nazriellesmono](https://github.com/Nazriellesmono)  
+- LinkedIn: [@Nazriellesmono](https://www.linkedin.com/in/nazriel-lesmono-8b8b8a359/)
 
 ---
 
 ## 📌 Status
-🚀 **Stable MVP** – Siap untuk demo dan uji coba internal. Cocok untuk showcase profesional dan portofolio AI di bidang fraud detection.
+🚀 **Stable MVP** – Ready for demo and internal testing. Ideal for professional showcase and AI fraud detection portfolio.
 
 > Powered by FastAPI, XGBoost, and mentorship feedback.
