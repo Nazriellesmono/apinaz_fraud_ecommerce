@@ -23,16 +23,16 @@ API ini dirancang untuk mendeteksi potensi aktivitas penipuan dalam transaksi e-
 ```json
 {
   "data": {
-    "feature_1": 0.53,
-    "feature_2": 1,
-    "feature_3": 125.00,
-    "feature_4": 0,
-    "feature_5": 2,
-    "feature_6": 1,
-    "feature_7": 0,
-    "feature_8": 3,
-    "feature_9": 0.82,
-    "feature_10": 1
+    "avg_item_price": 150000,
+    "avg_order_value": 450000,
+    "avg_response_time_min": 15,
+    "checkout_time_sec": 25,
+    "has_voucher": 1,
+    "location_match_Normal": 1,
+    "min_purchase": 100000,
+    "return_rate": 0.1,
+    "status_completed": 1,
+    "voucher_discount": 50000
   }
 }
 ```
@@ -42,7 +42,7 @@ API ini dirancang untuk mendeteksi potensi aktivitas penipuan dalam transaksi e-
 ```json
 {
   "is_fraud": true,
-  "fraud_probability": 0.872,
+  "fraud_probability": 0.9969,
   "risk_level": "high"
 }
 ```
