@@ -101,6 +101,7 @@ Isi dokumentasi meliputi:
 ## 👨‍💻 Author
 - **Nazriellesmono**
 - GitHub: [@Nazriellesmono](https://github.com/Nazriellesmono)
+- linkedin: [@Nazriellesmono](https://www.linkedin.com/in/nazriel-lesmono-8b8b8a359/)
 
 ---
 
