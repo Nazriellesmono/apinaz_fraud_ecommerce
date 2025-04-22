@@ -36,7 +36,6 @@ API ini dirancang untuk mendeteksi potensi aktivitas penipuan dalam transaksi e-
   }
 }
 ```
-*(Ganti dengan nama fitur sebenarnya sesuai implementasi model)*
 
 - **Respons**:
 ```json
@@ -71,7 +70,7 @@ Untuk mengakses endpoint prediksi, tambahkan header berikut:
 x-api-key: your_api_key_here
 ```
 
-> ⚠️ Pembatasan jumlah request telah diterapkan di `main.py`. Secara default, pengguna hanya dapat mengirim **5 request per menit**. Anda dapat mengubah nilai ini sesuai kebutuhan.
+> ⚠️ Pembatasan jumlah request telah diterapkan di `main.py`. Secara default, pengguna hanya dapat mengirim **30 request per menit** untuk predict/v1. Anda dapat mengubah nilai ini sesuai kebutuhan.
 
 ---
 
@@ -79,7 +78,7 @@ x-api-key: your_api_key_here
 
 Dokumentasi interaktif tersedia di Swagger UI setelah container berjalan:
 
-👉 [http://localhost:8888/docs](http://localhost:8888/docs)
+👉 [http://localhost:8889/docs](http://localhost:8889/docs)
 
 Isi dokumentasi meliputi:
 - Skema input (JSON)
